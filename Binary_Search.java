@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Binary_Search {
 
     public static void binary_search(int[] a, int high, int low, int k) {
@@ -23,24 +21,6 @@ public class Binary_Search {
         if(flag == 0) {
             System.out.println("\nThe target element is not in the array.");
         }
-
-    }
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of elements of the array: ");
-        int n = sc.nextInt();
-        int[] a = new int[n];
-        System.out.println("Enter the elements of the array.");
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-        }
-        int high = a.length;
-        int low = 0;
-        System.out.print("Enter the Target element: ");
-        int k = sc.nextInt();
-        binary_search(a, high, low, k);
 
     }
 
