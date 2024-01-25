@@ -4,17 +4,25 @@ public class Binary_Search {
 
     public static void main(String[] args) {
 
-        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of elements of the array: ");
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        System.out.println("Enter the elements of the array.");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
         int high = a.length;
         int low = 0;
-        int mid = (low + high)/2;
-        int k = 3;
+        int mid;
+        System.out.print("Enter the Target element: ");
+        int k = sc.nextInt();
         int flag = 0;
         while(low <= high) {
 
             mid = (low + high)/2;
             if(a[mid] == k) {
-                System.out.println("Found target element at position: " + mid);
+                System.out.println("\nFound target element at position: " + mid);
                 flag = 1;
                 break;
             } else if(a[mid] < k) {
@@ -25,7 +33,7 @@ public class Binary_Search {
 
         }
         if(flag == 0) {
-            System.out.println("The target element is not in the array.");
+            System.out.println("\nThe target element is not in the array.");
         }
 
     }
