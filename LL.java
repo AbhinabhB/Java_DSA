@@ -6,6 +6,23 @@ public class LL {
 
     public LL() {this.size = 0;}
 
+    public void display() {
+
+        if(head == null){
+            System.out.println("The Linked List is Empty!!");
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < size; i++) {
+
+            System.out.print(temp.value + " --> ");
+            temp = temp.next;
+
+        }
+
+    }
+
     public void insertFirst(int value) {
 
         Node node = new Node(value);
