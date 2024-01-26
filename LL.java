@@ -115,6 +115,26 @@ public class LL {
 
     }
 
+    public int delete(int index) {
+
+        try {
+            if(index == 0) {
+                return deleteFirst();
+            } else if(index == size - 1) {
+                return deleteLast();
+            } else {
+                Node prev = get(index - 1);
+                int removed_value = prev.next.value;
+                prev.next = prev.next.next;
+                size--;
+                return removed_value;
+            }
+        } catch (NullPointerException e) {
+            System.out.println("Index out of Bounds!");
+        }
+
+    }
+
     public int deleteLast() {
 
         if(size <= 1) {
