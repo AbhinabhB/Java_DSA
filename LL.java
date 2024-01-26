@@ -72,6 +72,21 @@ public class LL {
 
     }
 
+    public int deleteFirst() {
+
+        if(head == null) {
+            System.out.println("The linked list is empty!");
+            return -1;
+        }
+
+        int removed_value = head.value;
+        head = head.next;
+        if(head == null) { tail = null; }
+        size--;
+        return removed_value;
+        
+    }
+
     private class Node {
 
         private int value;
