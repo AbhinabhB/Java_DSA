@@ -86,6 +86,20 @@ public class LL {
 
     }
 
+    public Node get(int index) {
+
+        if(size < index &&  index < 0) {
+            System.out.println("Index out of bounds!");
+            return null;
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+
+    }
+
     public int deleteFirst() {
 
         if(head == null) {
