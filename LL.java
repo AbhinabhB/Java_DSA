@@ -18,6 +18,17 @@ public class LL {
 
     }
 
+    public void insertLast(int value) {
+
+        if(tail == null){insertFirst(value);return;}
+
+        Node node = new Node(value);
+        tail.next = node;
+        tail = node;
+        size++;
+
+    }
+
     private class Node {
 
         private int value;
