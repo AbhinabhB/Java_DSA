@@ -4,6 +4,19 @@ public class LL {
     private Node tail;
     private int size;
 
+    public LL() {this.size = 0;}
+
+    public void insertFirst(int value) {
+
+        Node node = new Node(value);
+        node.next = head;
+        head = node;
+        if(tail == null) {
+            tail = head;
+        }
+        size++;
+
+    }
 
     private class Node {
 
