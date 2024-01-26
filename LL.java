@@ -14,7 +14,7 @@ public class LL {
         }
 
         Node temp = head;
-        while(temp.next != null) {
+        while(temp != null) {
 
             System.out.print(temp.value + " --> ");
             temp = temp.next;
