@@ -36,6 +36,31 @@ public class LL {
 
     }
 
+    public void insert(int value, int index) {
+
+        try {
+
+            if(index == 0) {
+                insertFirst(value);
+                return;
+            } else if (index == size - 1) {
+                insertLast(value);
+            }
+
+            Node temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+
+            temp.next = new Node(value, temp.next);
+            size++;
+
+        } catch(NullPointerException e) {
+            System.out.println("Index Out of Bounds!");
+        }
+
+    }
+
     public void insertLast(int value) {
 
         if(tail == null){insertFirst(value);return;}
