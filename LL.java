@@ -115,18 +115,20 @@ public class LL {
 
     }
 
-//    public int deleteLast() {
-//
-//        if(size <= 1) {
-//            return deleteFirst();
-//        } else {
-//            Node
-//            int removed_value = tail.value;
-//
-//            return removed_value;
-//        }
-//
-//    }
+    public int deleteLast() {
+
+        if(size <= 1) {
+            return deleteFirst();
+        } else {
+            Node second_last = get(size - 2);
+            int removed_value = tail.value;
+            tail = second_last;
+            tail.next = null;
+            size--;
+            return removed_value;
+        }
+
+    }
 
     private class Node {
 
