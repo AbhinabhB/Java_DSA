@@ -131,6 +131,7 @@ public class LL {
             }
         } catch (NullPointerException e) {
             System.out.println("Index out of Bounds!");
+            return 0;
         }
 
     }
