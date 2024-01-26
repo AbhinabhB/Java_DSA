@@ -72,10 +72,24 @@ public class LL {
 
     }
 
+    public Node find(int value) {
+
+        Node temp = head;
+        while(temp != null) {
+
+            if(temp.value == value) {
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+
+    }
+
     public int deleteFirst() {
 
         if(head == null) {
-            System.out.println("The linked list is empty!");
+            System.out.println("The Linked List is Empty!");
             return -1;
         }
 
@@ -84,8 +98,21 @@ public class LL {
         if(head == null) { tail = null; }
         size--;
         return removed_value;
-        
+
     }
+
+//    public int deleteLast() {
+//
+//        if(size <= 1) {
+//            return deleteFirst();
+//        } else {
+//            Node
+//            int removed_value = tail.value;
+//
+//            return removed_value;
+//        }
+//
+//    }
 
     private class Node {
 
