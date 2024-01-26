@@ -14,12 +14,13 @@ public class LL {
         }
 
         Node temp = head;
-        for (int i = 0; i < size; i++) {
+        while(temp.next != null) {
 
             System.out.print(temp.value + " --> ");
             temp = temp.next;
 
         }
+        System.out.print(" END\n");
 
     }
 
